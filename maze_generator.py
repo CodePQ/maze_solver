@@ -114,7 +114,6 @@ def generate_maze_prim(grid):
 
     start_cell = grid[start_row][start_col]
     start_cell.in_maze = True
-    start_cell.color = START_COLOR
 
     frontier_list = []
     frontier_set = set()
@@ -142,12 +141,12 @@ def generate_maze_prim(grid):
 
         yield frontier_cell  # for animation
 
-    end_row, end_col = start_row, start_col
+    '''end_row, end_col = start_row, start_col
     while (end_row == start_row) & (end_col == start_col):
         end_row, end_col = random.choice(
             [(0, random.randint(0, COLS - 1)), (random.randint(0, ROWS - 1), 0)])
     end_cell = grid[end_row][end_col]
-    end_cell.color = END_COLOR
+    end_cell.color = END_COLOR'''
 
 
 def create_grid():
